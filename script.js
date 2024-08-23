@@ -57,4 +57,35 @@ document.addEventListener("DOMContentLoaded", () => {
       formContainer.style.display = "none";
     }
   });
+
+  // Логика для бокового меню и бургер-меню
+  const burgerMenu = document.getElementById("burger-menu");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("sidebar-overlay");
+  const burgerMenuInside = document.querySelector('.burger-menu-inside');
+
+  burgerMenu.addEventListener("click", () => {
+    burgerMenu.classList.toggle("active");
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    burgerMenu.classList.remove("active");
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  // Закрытие бокового меню при клике на бургер-меню внутри
+  burgerMenuInside.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+
+  // Логотип внутри боковой панели
+  const sidebarLogo = document.querySelector(".sidebar-logo");
+  sidebarLogo.addEventListener("click", () => {
+    window.location.href = "/";
+  });
 });

@@ -1,238 +1,408 @@
 :root {
-    --default-font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    --rpx: 100vw / 1920;
-    --success-bg-color: #ff8a44; /* Оранжевый цвет для сообщения */
-    --success-text-color: #ffffff; /* Белый цвет для текста */
-  }
-  
-  .main-container {
-    overflow: hidden;
-  }
-  
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
-  }
-  
-  input,
-  select,
-  textarea,
-  button {
-    outline: 0;
-    font-family: var(--default-font-family); /* Применяем шрифт ко всем элементам формы */
-  }
-  
-  .main-container {
-    position: relative;
-    width: calc(1920 * var(--rpx));
-    height: calc(1080 * var(--rpx));
-    margin: 0 auto;
-    background: #ffffff;
-    overflow: hidden;
-  }
-  .top-warehouse {
-    position: absolute;
-    width: calc(1981.1466064453125 * var(--rpx));
-    height: calc(1080 * var(--rpx));
-    top: 0;
-    left: calc(-30.5732421875 * var(--rpx));
-    background: url(images/sclad.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 7;
-  }
-  .rectangle {
-    position: absolute;
-    width: calc(1981.1466064453125 * var(--rpx));
-    height: calc(1080 * var(--rpx));
-    top: 0;
-    left: calc(-30.5732421875 * var(--rpx));
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 8;
-  }
-  .flex-row {
-    position: relative;
-    width: calc(1893.3341445922852 * var(--rpx));
-    height: calc(137.33331298828125 * var(--rpx));
-    margin: calc(0.00006103515625 * var(--rpx)) 0 0
-      calc(29.2392578125 * var(--rpx));
-    z-index: 14;
-  }
-  .rectangle-1 {
-    position: absolute;
-    width: calc(570.6666870117188 * var(--rpx));
-    height: calc(137.33331298828125 * var(--rpx));
-    top: 0;
-    left: 0;
-    background: #ffffff;
-    z-index: 14;
-  }
-  .logo-upscale {
-    position: relative;
-    width: calc(397.33331298828125 * var(--rpx));
-    height: calc(105.33333587646484 * var(--rpx));
-    margin: calc(14.6666259765625 * var(--rpx)) 0 0
-      calc(86.66748046875 * var(--rpx));
-    background: url(images/logo.svg)
-      no-repeat center;
-    background-size: cover;
-    z-index: 16;
-    overflow: hidden;
-  }
-  .ellipse {
-    position: absolute;
-    width: calc(780 * var(--rpx));
-    height: calc(137.19557189941406 * var(--rpx));
-    top: 0;
-    left: calc(570.66748046875 * var(--rpx));
-    cursor: pointer;
-    background: #ff8a44;
-    border: none;
-    z-index: 13;
-  }
-  .leave-request {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: calc(70 * var(--rpx));
-    top: calc(33.33331298828125 * var(--rpx));
-    left: calc(96 * var(--rpx));
-    color: #000000;
-    font-family: Montserrat, var(--default-font-family);
-    font-size: calc(57.33333206176758 * var(--rpx));
-    font-weight: 500;
-    line-height: calc(69.88932800292969 * var(--rpx));
-    text-align: left;
-    white-space: nowrap;
-    z-index: 15;
-  }
-  .frame {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    gap: calc(7.999999523162842 * var(--rpx));
-    position: absolute;
-    width: calc(58.666664123535156 * var(--rpx));
-    height: calc(40 * var(--rpx));
-    top: calc(34.66668701171875 * var(--rpx));
-    left: calc(1834.66748046875 * var(--rpx));
-    z-index: 9;
-  }
-  .rectangle-2 {
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-    min-width: 0;
-    height: calc(7.999999523162842 * var(--rpx));
-    background: #ff8a44;
-    z-index: 10;
-  }
-  .rectangle-3 {
-    flex-shrink: 0;
-    position: relative;
-    width: calc(50.66666793823242 * var(--rpx));
-    height: calc(7.999999523162842 * var(--rpx));
-    background: #ff8a44;
-    z-index: 11;
-  }
-  .rectangle-4 {
-    flex-shrink: 0;
-    position: relative;
-    width: calc(42.66666793823242 * var(--rpx));
-    height: calc(7.999999523162842 * var(--rpx));
-    background: #ff8a44;
-    z-index: 12;
-  }
-  .world-delivery {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: calc(893 * var(--rpx));
-    height: calc(416 * var(--rpx));
-    margin: calc(177.3333740234375 * var(--rpx)) 0 0
-      calc(542.5732421875 * var(--rpx));
-    color: #ffffff;
-    font-family: Montserrat, var(--default-font-family);
-    font-size: calc(170.66665649414062 * var(--rpx));
-    font-weight: 700;
-    line-height: calc(207.83460998535156 * var(--rpx));
-    text-align: center;
-    text-overflow: initial;
-    z-index: 17;
-    overflow: hidden;
-  }
+  --default-font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  --rpx: 100vw / 1920;
+  --success-bg-color: #ff8a44; /* Оранжевый цвет для сообщения */
+  --success-text-color: #ffffff; /* Белый цвет для текста */
+}
 
-  /* Стили для формы */
-  .form-container {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 20px;
-    border-radius: 8px;
-    font-family: var(--default-font-family); /* Применение шрифта к форме */
-  }
+html, body {
+  height: 100%; /* Устанавливаем высоту на 100% для HTML и body */
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Фон на случай, если изображение не загрузится */
+}
 
-  .form-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    font-family: var(--default-font-family); /* Применение шрифта к заголовку формы */
-  }
+.main-container {
+  position: relative;
+  width: 100vw; /* Занимаем всю ширину экрана */
+  height: 100vh; /* Занимаем всю высоту экрана */
+  overflow: hidden;
+}
 
-  .close-button {
-    cursor: pointer;
-    font-size: 24px;
-  }
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
 
-  .form-container input,
-  .form-container textarea,
-  .form-container button {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: var(--default-font-family); /* Применение шрифта к полям формы */
-  }
+input,
+select,
+textarea,
+button {
+  outline: 0;
+  font-family: var(--default-font-family); /* Применяем шрифт ко всем элементам формы */
+}
 
-  .form-container button {
-    background-color: #ff8a44;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-family: var(--default-font-family); /* Применение шрифта к кнопке */
-  }
+.top-warehouse {
+  position: absolute;
+  width: 100%; /* На всю ширину */
+  height: 100%; /* На всю высоту */
+  top: 0;
+  left: 0;
+  background: url(images/sclad.png) no-repeat center;
+  background-size: cover;
+  z-index: 7;
+}
 
-  .form-container button:hover {
-    background-color: #e77c3c;
-  }
+.rectangle {
+  position: absolute;
+  width: 100%; /* На всю ширину */
+  height: 100%; /* На всю высоту */
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 8;
+}
 
-  /* Стили для всплывающего сообщения */
-  #successMessage {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--success-bg-color) !important; /* Оранжевый фон с !important */
-    color: var(--success-text-color) !important; /* Белый текст с !important */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1001; /* Выше, чем форма */
-    font-family: var(--default-font-family); /* Применение шрифта к сообщению */
-    text-align: center;
+.flex-row {
+  position: relative;
+  width: 100%; /* Занимаем всю ширину */
+  height: calc(137.33331298828125 * var(--rpx));
+  margin: 0 auto;
+  z-index: 14;
+}
+
+.rectangle-1 {
+  position: absolute;
+  width: 350px; /* Фиксированная ширина */
+  height: calc(137.33331298828125 * var(--rpx));
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 14;
+}
+
+.logo-upscale {
+  position: relative;
+  width: 100%; /* Ширина на всю ширину бокового меню */
+  height: calc(105.33333587646484 * var(--rpx));
+  margin: calc(14.6666259765625 * var(--rpx)) 0 0 0;
+  background: url(images/logo.svg) no-repeat center;
+  background-size: contain; /* Чтобы логотип не выходил за границы */
+  z-index: 16;
+  overflow: hidden;
+}
+
+.ellipse {
+  position: absolute;
+  width: calc(780 * var(--rpx));
+  height: calc(137.19557189941406 * var(--rpx));
+  top: 0;
+  left: 350px; /* Смещаем влево на ширину бокового меню */
+  cursor: pointer;
+  background: #ff8a44;
+  border: none;
+  z-index: 13;
+}
+
+.leave-request {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: calc(70 * var(--rpx));
+  top: calc(33.33331298828125 * var(--rpx));
+  left: calc(96 * var(--rpx));
+  color: #000000;
+  font-family: Montserrat, var(--default-font-family);
+  font-size: calc(57.33333206176758 * var(--rpx));
+  font-weight: 500;
+  line-height: calc(69.88932800292969 * var(--rpx));
+  text-align: left;
+  white-space: nowrap;
+  z-index: 15;
+}
+
+.world-delivery {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: calc(893 * var(--rpx));
+  height: calc(416 * var(--rpx));
+  margin: calc(177.3333740234375 * var(--rpx)) auto 0;
+  color: #ffffff;
+  font-family: Montserrat, var(--default-font-family);
+  font-size: calc(170.66665649414062 * var(--rpx));
+  font-weight: 700;
+  line-height: calc(207.83460998535156 * var(--rpx));
+  text-align: center;
+  text-overflow: initial;
+  z-index: 17;
+  overflow: hidden;
+}
+
+/* Стили для формы */
+.form-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Обеспечиваем, что форма не выйдет за границы */
+  max-width: 400px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: var(--default-font-family); /* Применение шрифта к форме */
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: var(--default-font-family); /* Применение шрифта к заголовку формы */
+}
+
+.close-button {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--default-font-family); /* Применение шрифта к полям формы */
+  box-sizing: border-box;
+}
+
+.form-container button {
+  background-color: #ff8a44;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: var(--default-font-family); /* Применение шрифта к кнопке */
+}
+
+.form-container button:hover {
+  background-color: #e77c3c;
+}
+
+/* Стили для всплывающего сообщения */
+#successMessage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--success-bg-color) !important; /* Оранжевый фон с !important */
+  color: var(--success-text-color) !important; /* Белый текст с !important */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Выше, чем форма */
+  font-family: var(--default-font-family); /* Применение шрифта к сообщению */
+  text-align: center;
+  max-width: 90%; /* Ограничение ширины для предотвращения вылезания за пределы экрана */
+  box-sizing: border-box;
+}
+
+/* Дополнительное правило для центрирования */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 35px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; /* Линии выравниваются по левому краю */
+  cursor: pointer;
+  z-index: 1001;
+  background: none;
+  border: none;
+}
+
+.burger-menu .line {
+  width: 100%;
+  height: 4px;
+  background-color: #ff8a44;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger-menu .short-line {
+  width: 75%; /* Средняя линия короче на 25% */
+}
+
+/* Анимация для открытия бургер-меню */
+.burger-menu.active .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu.active .line:nth-child(2) {
+  opacity: 0; /* Скрытие средней линии */
+}
+
+.burger-menu.active .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.burger-menu-inside {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burger-menu-inside .line {
+  width: 30px;
+  height: 4px;
+  background-color: #ff8a44;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px; /* Начальная позиция за экраном */
+  width: 350px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-logo {
+  position: absolute;
+  top: 80px; /* немного ниже */
+  left: 50%; /* центрирование по горизонтали */
+  transform: translateX(-50%); /* центрирование по горизонтали */
+  width: 80%;
+  z-index: 1002;
+}
+
+@media (max-width: 768px) {
+  .sidebar-logo {
+    top: 60px; /* измените значение для маленьких экранов, если нужно */
   }
+}
+
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.sidebar-menu .menu-item {
+  padding: 25px 0;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 400;
+  position: relative;
+  font-size: 24px; /* Размер шрифта */
+}
+
+.sidebar-menu .menu-item::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 50%; /* Ширина линии под пунктами меню */
+  height: 2px;
+  background-color: #ff8a44; /* Цвет линии */
+}
+
+.sidebar-menu .menu-item:hover {
+  color: #ff8a44;
+}
+
+
+/* Затемняющий слой */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  z-index: 999; /* Располагается перед основным контентом, но за сайдбаром */
+  display: none; /* Скрыт по умолчанию */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Плавный переход для затемнения */
+}
+
+/* Активное состояние затемняющего слоя */
+.overlay.active {
+  display: block;
+  opacity: 1; /* Затемнение становится видимым */
+}
+
+.burger-icon {
+  width: 50px; /* Ширина иконки, можно изменить по вашему усмотрению */
+  height: 40px; /* Высота иконки */
+  cursor: pointer;
+}
+
+.burger-menu, .burger-menu-inside {
+  background: none;
+  border: none;
+  z-index: 1001;
+  cursor: pointer;
+  padding: 0; /* Убираем отступы */
+}
+
+.burger-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.burger-menu-inside {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
