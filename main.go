@@ -6,9 +6,16 @@ import (
 	"net/http"
 	"net/smtp"
 	"os"
+
+	"github.com/joho/godotenv"
 )
 
 func sendEmail(to, subject, body string) error {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+
 	from := os.Getenv("EMAIL_FROM")
 	password := os.Getenv("EMAIL_PASSWORD")
 
@@ -22,12 +29,11 @@ func sendEmail(to, subject, body string) error {
 		"\r\n" +
 		body + "\r\n")
 
-	err := smtp.SendMail(smtpHost+":"+smtpPort, auth, from, []string{to}, msg)
+	err = smtp.SendMail(smtpHost+":"+smtpPort, auth, from, []string{to}, msg)
 	return err
 }
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
-	// Настройка CORS заголовков
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
