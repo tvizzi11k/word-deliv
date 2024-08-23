@@ -9,11 +9,11 @@ import (
 )
 
 func sendEmail(to, subject, body string) error {
-	from := "zgalkin319@gmail.com"
-	password := "icid adgf ksuv nbxk"
+	from := os.Getenv("EMAIL_FROM")
+	password := os.Getenv("EMAIL_PASSWORD")
 
-	smtpHost := "smtp.gmail.com"
-	smtpPort := "587"
+	smtpHost := os.Getenv("SMTP_HOST")
+	smtpPort := os.Getenv("SMTP_PORT")
 
 	auth := smtp.PlainAuth("", from, password, smtpHost)
 
