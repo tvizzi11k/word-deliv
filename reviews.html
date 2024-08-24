@@ -3,31 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>world-delivery</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" />
-    <link rel="stylesheet" href="index.css" />
+    <title>word-delivery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" />
+    <link rel="stylesheet" href="reviews.css" />
   </head>
   <body>
     <div class="main-container">
-      <div class="top-warehouse"></div>
+      <div class="jonathan-kemper-unsplash"></div>
       <div class="rectangle">
-        <div class="flex-row">
-          <div class="rectangle-1">
-            <a href="/" class="logo-link">
-              <div class="logo-upscale"></div>
-            </a>
-            <button class="ellipse" id="open-form-button">
-              <span class="leave-request">ОСТАВИТЬ ЗАЯВКУ</span>
-            </button>
-          </div>
-          <button class="burger-menu" id="burger-menu">
-            <img src="images/burger-icon-on-site.svg" alt="Menu" class="burger-icon">
-          </button>
-        </div>
-        <span class="world-delivery">WORLD<br />DELIVERY</span>
+        <button class="ellipse" id="open-form-button">
+          <span class="leave-request">ОСТАВИТЬ ЗАЯВКУ</span>
+        </button>
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+        <div class="line-4"></div>
+        <div class="line-5"></div>
+        <div class="line"></div>
+        <div class="frame"></div>
       </div>
+      <div class="rectangle-1"><span class="reviews-2">Отзывы</span></div>
     </div>
 
+    <!-- Контейнер с формой -->
     <div id="contact-form" class="form-container">
       <div class="form-header">
         <h2>Отправить заявку</h2>
@@ -42,12 +40,14 @@
       </form>
     </div>
 
+    <!-- Сообщение об успешной отправке -->
     <div id="successMessage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ff8a44; color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); z-index: 1001; font-family: Montserrat, var(--default-font-family); text-align: center;">
       Спасибо! Ваша заявка отправлена успешно.
     </div>
 
     <div id="sidebar-overlay" class="overlay"></div>
-    
+
+    <!-- Sidebar меню, которое будет появляться слева -->
     <div class="sidebar" id="sidebar">
       <button class="burger-menu-inside">
         <img src="images/burger-on-siteboard.svg" alt="Close" class="burger-icon">
@@ -64,10 +64,7 @@
         <li class="menu-item">Отзывы</li>
       </ul>
     </div>
-    
 
-    <script src="script.js"></script>
+    <script src="reviews.js"></script>
   </body>
 </html>
-
-<!-- заменить почту пароль + заменить на хост вместо локал хоста-->

@@ -95,24 +95,19 @@ button {
   background: #ff8a44;
   border: none;
   z-index: 13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .leave-request {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: calc(70 * var(--rpx));
-  top: calc(33.33331298828125 * var(--rpx));
-  left: calc(96 * var(--rpx));
   color: #000000;
   font-family: Montserrat, var(--default-font-family);
   font-size: calc(57.33333206176758 * var(--rpx));
   font-weight: 500;
-  line-height: calc(69.88932800292969 * var(--rpx));
-  text-align: left;
+  line-height: 1; /* Линия текста равна размеру шрифта */
+  text-align: center;
   white-space: nowrap;
-  z-index: 15;
 }
 
 .world-delivery {
@@ -279,7 +274,6 @@ body {
   transition: all 0.3s ease;
 }
 
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -315,7 +309,6 @@ body {
   }
 }
 
-
 .sidebar-menu {
   list-style: none;
   padding: 0;
@@ -326,7 +319,6 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
 
 .sidebar-menu .menu-item {
   padding: 25px 0;
@@ -352,7 +344,6 @@ body {
 .sidebar-menu .menu-item:hover {
   color: #ff8a44;
 }
-
 
 /* Затемняющий слой */
 .overlay {
