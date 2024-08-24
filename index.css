@@ -76,13 +76,20 @@ button {
 
 .logo-upscale {
   position: relative;
-  width: 100%; /* Ширина на всю ширину бокового меню */
-  height: 90%; /* Высота логотипа равна высоте блока */
+  width: 90%; /* Ширина на всю ширину бокового меню */
+  height: 70%; /* Высота логотипа равна высоте блока */
   background: url(images/logo.svg) no-repeat center;
   background-size: contain; /* Чтобы логотип не выходил за границы */
   z-index: 16;
   overflow: hidden;
+  display: flex; /* Добавлено для центрирования */
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center; /* Центрирование по горизонтали */
+  margin-top: 15px; /* Добавлен отступ сверху */
+  margin-left: 20px; /* Отступ слева для сдвига логотипа правее */
 }
+
+
 
 
 .ellipse {
@@ -103,7 +110,7 @@ button {
 .leave-request {
   color: #000000;
   font-family: Montserrat, var(--default-font-family);
-  font-size: calc(50 * var(--rpx)); /* Уменьшение размера текста на кнопке */
+  font-size: calc(52 * var(--rpx)); /* Уменьшение размера текста на кнопке */
   font-weight: 500;
   line-height: 1;
   text-align: center;
