@@ -66,8 +66,8 @@ button {
 
 .rectangle-1 {
   position: absolute;
-  width: 350px; /* Фиксированная ширина */
-  height: calc(137.33331298828125 * var(--rpx));
+  width: 350px; /* Оставляем ширину такой же */
+  height: calc(137.19557189941406 * var(--rpx)); /* Высота равная высоте кнопки */
   top: 0;
   left: 0;
   background: #ffffff;
@@ -77,20 +77,20 @@ button {
 .logo-upscale {
   position: relative;
   width: 100%; /* Ширина на всю ширину бокового меню */
-  height: calc(105.33333587646484 * var(--rpx));
-  margin: calc(14.6666259765625 * var(--rpx)) 0 0 0;
+  height: 90%; /* Высота логотипа равна высоте блока */
   background: url(images/logo.svg) no-repeat center;
   background-size: contain; /* Чтобы логотип не выходил за границы */
   z-index: 16;
   overflow: hidden;
 }
 
+
 .ellipse {
   position: absolute;
-  width: calc(780 * var(--rpx));
-  height: calc(137.19557189941406 * var(--rpx));
+  width: calc(650 * var(--rpx)); /* Уменьшение ширины кнопки */
+  height: calc(137 * var(--rpx)); /* Уменьшение высоты кнопки */
   top: 0;
-  left: 350px; /* Смещаем влево на ширину бокового меню */
+  left: 350px;
   cursor: pointer;
   background: #ff8a44;
   border: none;
@@ -103,9 +103,9 @@ button {
 .leave-request {
   color: #000000;
   font-family: Montserrat, var(--default-font-family);
-  font-size: calc(57.33333206176758 * var(--rpx));
+  font-size: calc(50 * var(--rpx)); /* Уменьшение размера текста на кнопке */
   font-weight: 500;
-  line-height: 1; /* Линия текста равна размеру шрифта */
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
 }
@@ -215,18 +215,23 @@ body {
 .burger-menu {
   position: absolute;
   top: 20px;
-  right: 20px;
-  width: 35px;
-  height: 30px;
+  right: 100px; /* Сдвигаем бургер-меню левее */
+  width: 45px;
+  height: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start; /* Линии выравниваются по левому краю */
   cursor: pointer;
   z-index: 1001;
   background: none;
   border: none;
 }
+
+.burger-menu img {
+  width: 100%;
+  height: auto;
+}
+
 
 .burger-menu .line {
   width: 100%;
