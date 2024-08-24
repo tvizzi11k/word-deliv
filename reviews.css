@@ -22,14 +22,14 @@ body, html {
 }
 
 .jonathan-kemper-unsplash {
-    position: fixed; /* Фиксируем фон относительно окна */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Ширина фона равна ширине экрана */
-    height: 100vh; /* Высота фона равна высоте экрана */
-    background: url(images/review-pic.png) no-repeat center center fixed;
-    background-size: cover; /* Покрывает весь экран */
-    z-index: 1; /* Фон будет позади всех остальных элементов */
+    width: 100vw;
+    height: 100vh;
+    background: url(images/review-pic.png) no-repeat center top;
+    background-size: cover;
+    z-index: 1;
 }
 
 .rectangle {
@@ -38,9 +38,11 @@ body, html {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.1); /* Уменьшенное затемнение */
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
+
+
 
 .ellipse {
     position: fixed; /* Позиционирование fixed */
