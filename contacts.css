@@ -27,21 +27,21 @@ html, body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url(images/contact-pic.png) no-repeat center top;
+    background: url(images/contact-pic.png) no-repeat center center;
     background-size: cover;
     z-index: 1;
 }
+
 
 .rectangle {
     position: relative;
     width: 800px;
     height: 250px;
     max-width: 1200px;
-    margin: 280.914px auto 0 auto;
+    margin: 230.914px auto 0 auto; 
     background: #ffffff;
-    z-index: 1;
+    z-index: 2;
     padding: 40px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -52,12 +52,11 @@ html, body {
     top: 0;
     right: 0;
     width: 60px;
-    height: 60px; 
+    height: 60px;
     background-color: #d3d3d3;
     clip-path: polygon(100% 0, 0 0, 100% 100%);
     z-index: 2;
 }
-
 
 .contacts-content {
     position: relative;
@@ -69,9 +68,9 @@ html, body {
     font-size: 36px;
     font-weight: 600;
     color: #ff8a44;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 20px;
-    font-family: Montserrat, var(--default-font-family); 
+    font-family: Montserrat, var(--default-font-family);
 }
 
 .contact-block {
@@ -80,7 +79,7 @@ html, body {
     align-items: center;
     width: 100%;
     font-family: Montserrat, var(--default-font-family);
-    padding: 20px 0; 
+    padding: 20px 0;
 }
 
 .text-3, .text-4, .text-5 {
@@ -88,28 +87,27 @@ html, body {
     font-size: 18px;
     font-weight: 500;
     text-align: left;
-    margin: 0; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .contacts-info {
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 20px;
     align-items: center;
     position: relative;
-    padding-top: 40px; 
-    padding-bottom: 40px; 
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
-
 
 .ellipse {
     position: fixed;
     width: 430px;
     height: 85px;
-    top: -5px;
+    top: 0px; /* Позиционирование кнопки */
     right: 0;
     cursor: pointer;
     background: #ff8a44;
@@ -301,4 +299,26 @@ html, body {
     margin: 0;
     padding: 0;
     cursor: pointer;
+}
+
+/* Добавим рыжие полосы напротив кнопки */
+.orange-stripes {
+    position: absolute;
+    top: 40px; /* Позиционирование напротив кнопки */
+    right: 480px; /* Сдвиг влево, чтобы полосы были напротив кнопки */
+    width: 300px;
+    height: 2px;
+    background-color: #ff8a44;
+    z-index: 15;
+}
+
+.orange-stripes::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Расстояние между полосами */
+    left: 0;
+    width: 300px;
+    height: 2px;
+    background-color: #ff8a44;
+    z-index: 15;
 }
