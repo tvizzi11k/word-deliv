@@ -84,7 +84,8 @@ body, html {
     background-size: contain; /* Масштабирование иконки до размера контейнера */
     z-index: 12;
     margin: 0; /* Убираем внешние отступы */
-    padding: 0; /* Убираем внутренние отступы */
+    padding: 0;
+    cursor: pointer; /* Убираем внутренние отступы */
 }
 
 .rectangle-1 {
