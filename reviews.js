@@ -1,54 +1,56 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Останавливаем стандартную отправку формы
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // Останавливаем стандартную отправку формы
 
-    const formData = new FormData(form);
+      const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: form.method,
-      body: formData
-    })
-    .then(response => {
-      return response.json().then(data => {
-        if (response.ok && data.status === "success") {
-          const successMessage = document.getElementById("successMessage");
-          const formContainer = document.getElementById("contact-form");
+      fetch(form.action, {
+        method: form.method,
+        body: formData
+      })
+      .then(response => {
+        return response.json().then(data => {
+          if (response.ok && data.status === "success") {
+            const successMessage = document.getElementById("successMessage");
+            const formContainer = document.getElementById("contact-form");
 
-          formContainer.style.display = "none";
-          successMessage.style.display = "block";
-          setTimeout(() => {
-            successMessage.style.display = "none";
-            window.location.href = "/";
-          }, 3000);
-        } else {
-          alert("Ошибка отправки формы: " + (data.message || "Неизвестная ошибка"));
-        }
+            formContainer.style.display = "none";
+            successMessage.style.display = "block";
+            setTimeout(() => {
+              successMessage.style.display = "none";
+              window.location.href = "/";
+            }, 3000);
+          } else {
+            alert("Ошибка отправки формы: " + (data.message || "Неизвестная ошибка"));
+          }
+        });
+      })
+      .catch(error => {
+        alert("Ошибка отправки формы.");
       });
-    })
-    .catch(error => {
-      alert("Ошибка отправки формы.");
     });
-  });
 
-  const formContainer = document.getElementById("contact-form");
-  const openFormButton = document.getElementById("open-form-button");
-  const closeFormButton = document.getElementById("close-form");
+    const formContainer = document.getElementById("contact-form");
+    const openFormButton = document.getElementById("open-form-button");
+    const closeFormButton = document.getElementById("close-form");
 
-  openFormButton.addEventListener("click", () => {
-    formContainer.style.display = "block";
-  });
+    openFormButton.addEventListener("click", () => {
+      formContainer.style.display = "block";
+    });
 
-  closeFormButton.addEventListener("click", () => {
-    formContainer.style.display = "none";
-  });
-
-  window.addEventListener("click", (event) => {
-    if (event.target === formContainer) {
+    closeFormButton.addEventListener("click", () => {
       formContainer.style.display = "none";
-    }
-  });
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target === formContainer) {
+        formContainer.style.display = "none";
+      }
+    });
+  }
 
   // Логика для бокового меню и бургер-меню
   const burgerMenu = document.querySelector(".frame");
@@ -56,24 +58,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("sidebar-overlay");
   const burgerMenuInside = document.querySelector('.burger-menu-inside');
 
-  burgerMenu.addEventListener("click", () => {
-    burgerMenu.classList.toggle("active");
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
-  });
+  if (burgerMenu) {
+    burgerMenu.addEventListener("click", () => {
+      burgerMenu.classList.toggle("active");
+      sidebar.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
 
-  overlay.addEventListener("click", () => {
-    burgerMenu.classList.remove("active");
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-  });
+    overlay.addEventListener("click", () => {
+      burgerMenu.classList.remove("active");
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    });
 
-  // Закрытие бокового меню при клике на бургер-меню внутри
-  burgerMenuInside.addEventListener('click', () => {
-    burgerMenu.classList.remove('active');
-    sidebar.classList.remove('active');
-    overlay.classList.remove('active');
-  });
+    // Закрытие бокового меню при клике на бургер-меню внутри
+    burgerMenuInside.addEventListener('click', () => {
+      burgerMenu.classList.remove('active');
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  }
 
   // Логика для переходов по страницам из меню
   const menuItems = document.querySelectorAll(".sidebar-menu .menu-item");

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=1024">
+    <title>word-delivery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap"/>
+    <link rel="stylesheet" href="partnership.css"/>
+</head>
+<body>
+<div class="main-container">
+    <div class="background-image"></div>
+    <div class="rectangle">
+        <button class="ellipse" id="open-form-button">
+            <span class="leave-request">ОСТАВИТЬ ЗАЯВКУ</span>
+        </button>
+        <div class="frame">
+            <!-- Иконка бургер-меню -->
+        </div>
+        <div class="contacts-content">
+            <span class="contacts-1">Сотрудничество</span>
+            <div class="contacts-info">
+                <div class="contact-block">
+                    <p class="text-bold">
+                        В связи с расширением деятельности транспортная компания ООО «ТК ПАРТНЕР» приглашает к сотрудничеству:
+                    </p>
+                    <ul class="bullet-points">
+                        <li>Владельцев грузового автотранспорта;</li>
+                        <li>Собственников офисных и складских помещений;</li>
+                        <li>Поставщиков товаров и услуг;</li>
+                    </ul>
+                    <p class="text-bold">
+                        Такое сотрудничество даст возможность Вашей компании:
+                    </p>
+                    <ul class="bullet-points">
+                        <li>Расширить географию перевозок;</li>
+                        <li>Доставлять и забирать груз Ваших Клиентов не только в крупных городах, но и в небольших населенных пунктах;</li>
+                        <li>Увеличить количество своих Клиентов;</li>
+                    </ul>
+                    <p class="text-bold">
+                        Мы рассматриваем возможность взаимодействия с транспортными компаниями, специализирующимися на железнодорожных перевозках негабаритного груза, контейнерных перевозках.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Контейнер с формой -->
+<div id="contact-form" class="form-container">
+    <div class="form-header">
+        <h2>Отправить заявку</h2>
+        <span id="close-form" class="close-button">&times;</span>
+    </div>
+    <form id="contactForm" action="http://localhost:8080/submit_form" method="POST">
+        <input type="text" name="name" placeholder="ВАШЕ имя" required>
+        <input type="text" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="Почта" required>
+        <textarea name="message" placeholder="Сообщение" required></textarea>
+        <button type="submit">ОТПРАВИТЬ</button>
+    </form>
+</div>
+
+<!-- Сообщение об успешной отправке -->
+<div id="successMessage"
+     style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ff8a44; color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); z-index: 1001; font-family: Montserrat, var(--default-font-family); text-align: center;">
+    Спасибо! Ваша заявка отправлена успешно.
+</div>
+
+<div id="sidebar-overlay" class="overlay"></div>
+
+<!-- Sidebar меню, которое будет появляться слева -->
+<div class="sidebar" id="sidebar">
+    <button class="burger-menu-inside">
+        <img src="images/burger-on-siteboard.svg" alt="Close" class="burger-icon">
+    </button>
+    <a href="/" class="sidebar-logo">
+        <img src="images/logo.svg" alt="Logo">
+    </a>
+    <ul class="sidebar-menu">
+        <li class="menu-item">О компании</li>
+        <li class="menu-item">Услуги</li>
+        <li class="menu-item">Документы</li>
+        <li class="menu-item">Сотрудничество</li>
+        <li class="menu-item">Контакты</li>
+        <li class="menu-item">Отзывы</li>
+    </ul>
+</div>
+
+<script src="reviews.js"></script>
+</body>
+</html>
