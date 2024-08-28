@@ -45,8 +45,8 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-right: 270px;
-    margin-top: 150px;
+    margin-right: 300px;
+    margin-top: 200px;
 }
 
 .rectangle::before {
