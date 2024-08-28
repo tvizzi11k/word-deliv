@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>word-delivery</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" />
     <link rel="stylesheet" href="documents.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="main-container">
-      <div class="jonathan-kemper-unsplash"></div>
-      <div class="rectangle"></div>
-      <div class="ellipse"></div>
-      <div class="line"></div>
-      <button class="leave-request">ОСТАВИТЬ ЗАЯВКУ</button>
-      <div class="line-1"></div>
-      <div class="line-2"></div>
-      <div class="line-3"></div>
-      <div class="frame"></div>
-      <div class="line-4"></div>
-      <div class="line-5"></div>
-      <div class="reliability">
-        <span class="reliability-6">надежность /</span
-        ><span class="reliability-7"> reliability</span>
-      </div>
-      <div class="professionalism">
-        <span class="professionalism-8">профессионализм / </span
-        ><span class="professionalism-9">professionalism</span>
-      </div>
-      <div class="rectangle-a"></div>
-      <div class="polygon"></div>
-      <span class="documents">Документы</span>
-      <div class="transportation-agreement">
-        <span class="transportation-agreement-specs"
-          >Договор транспортной экспедиции<br /><br />Технические характеристики
-          передвижных средств<br /><br />Устав железнодорожного транспорта
-          РФ</span
-        ><span class="and"> и </span
-        ><span class="transportation-agreement-specs-b"
-          >правила перевозок<br /><br />Технические условия размещения и
-          крепления грузов в вагонах и контейнерах</span
-        >
-      </div>
-      <div class="responsibility">
-        <span class="responsibility-c">ответственность / </span
-        ><span class="responsibility-d">responsibility</span>
-      </div>
-      <button class="rectangle-e"></button
-      ><span class="download-presentation">Скачать презентацию</span>
+        <div class="background-image"></div>
+        <button class="ellipse" id="open-form-button">
+            <span class="leave-request">ОСТАВИТЬ ЗАЯВКУ</span>
+        </button>
+        <div class="frame">
+            <!-- Иконка бургер-меню -->
+        </div>
+        <div class="text-container">
+            <span class="documents">Документы</span>
+            <div class="transportation-agreement">
+                <ul>
+                    <li>Договор транспортной экспедиции</li>
+                    <li>Технические характеристики передвижных средств</li>
+                    <li>Устав железнодорожного транспорта РФ и правила перевозок</li>
+                    <li>Технические условия размещения и крепления грузов в вагонах и контейнерах</li>
+                </ul>
+            </div>
+        </div>
+        <a href="http://localhost:8080/download" class="rectangle-e">
+            <span class="download-presentation">Скачать презентацию</span>
+        </a>
     </div>
-  </body>
+
+    <!-- Контейнер с формой -->
+    <div id="contact-form" class="form-container">
+        <div class="form-header">
+            <h2>Отправить заявку</h2>
+            <span id="close-form" class="close-button">&times;</span>
+        </div>
+        <form id="contactForm" action="http://localhost:8080/submit_form" method="POST">
+            <input type="text" name="name" placeholder="ВАШЕ имя" required>
+            <input type="text" name="phone" placeholder="Телефон" required>
+            <input type="email" name="email" placeholder="Почта" required>
+            <textarea name="message" placeholder="Сообщение" required></textarea>
+            <button type="submit">ОТПРАВИТЬ</button>
+        </form>
+    </div>
+
+    <!-- Сообщение об успешной отправке -->
+    <div id="successMessage"
+        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ff8a44; color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); z-index: 1001; font-family: Montserrat, var(--default-font-family); text-align: center;">
+        Спасибо! Ваша заявка отправлена успешно.
+    </div>
+
+    <div id="sidebar-overlay" class="overlay"></div>
+
+    <!-- Sidebar меню, которое будет появляться слева -->
+    <div class="sidebar" id="sidebar">
+        <button class="burger-menu-inside">
+            <img src="images/burger-on-siteboard.svg" alt="Close" class="burger-icon">
+        </button>
+        <a href="/" class="sidebar-logo">
+            <img src="images/logo.svg" alt="Logo">
+        </a>
+        <ul class="sidebar-menu">
+            <li class="menu-item">О компании</li>
+            <li class="menu-item">Услуги</li>
+            <li class="menu-item">Документы</li>
+            <li class="menu-item">Сотрудничество</li>
+            <li class="menu-item">Контакты</li>
+            <li class="menu-item">Отзывы</li>
+        </ul>
+    </div>
+
+    <script src="reviews.js"></script>
+</body>
 </html>
