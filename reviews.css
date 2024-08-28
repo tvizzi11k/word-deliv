@@ -10,7 +10,7 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; /* Убираем возможность скроллинга */
+    overflow: hidden; 
 }
 
 .main-container {
@@ -45,8 +45,8 @@ body, html {
 .ellipse {
     position: fixed;
     width: 430px;
-    height: 85px; /* Уменьшенная высота кнопки */
-    top: -5px; /* Отрицательный отступ сверху, чтобы подтянуть кнопку вплотную */
+    height: 85px; 
+    top: -5px; 
     right: 0;
     cursor: pointer;
     background: #ff8a44;
@@ -76,16 +76,16 @@ body, html {
     align-items: center;
     justify-content: center;
     position: fixed;
-    width: 40px; /* Чуть увеличенный размер */
-    height: 40px; /* Чуть увеличенный размер */
-    top: 40px; /* Отступ от верхнего края */
-    left: 25px; /* Отступ от левого края */
+    width: 40px; 
+    height: 40px; 
+    top: 40px; 
+    left: 25px; 
     background: url(images/burgermenu-reverse.svg) no-repeat center;
-    background-size: contain; /* Масштабирование иконки до размера контейнера */
+    background-size: contain; 
     z-index: 12;
-    margin: 0; /* Убираем внешние отступы */
+    margin: 0; 
     padding: 0;
-    cursor: pointer; /* Убираем внутренние отступы */
+    cursor: pointer; 
 }
 
 .rectangle-1 {
@@ -103,12 +103,12 @@ body, html {
     align-items: flex-start;
     justify-content: flex-start;
     position: absolute;
-    height: 40px; /* Фиксированная высота текста */
+    height: 40px; 
     top: 50px;
     left: 50px;
     color: #ff8a44;
     font-family: Montserrat, var(--default-font-family);
-    font-size: 36px; /* Фиксированный размер текста */
+    font-size: 36px;
     font-weight: 600;
     text-align: left;
 }
@@ -119,14 +119,14 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Обеспечиваем, что форма не выйдет за границы */
+    width: 90%; 
     max-width: 400px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 20px;
     border-radius: 8px;
-    font-family: Montserrat, var(--default-font-family); /* Применение шрифта к форме */
+    font-family: Montserrat, var(--default-font-family); 
 }
 
 .form-header {
@@ -134,7 +134,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    font-family: Montserrat, var(--default-font-family); /* Применение шрифта к заголовку формы */
+    font-family: Montserrat, var(--default-font-family); 
 }
 
 .close-button {
@@ -150,7 +150,7 @@ body, html {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-family: Montserrat, var(--default-font-family); /* Применение шрифта к полям формы */
+    font-family: Montserrat, var(--default-font-family); 
     box-sizing: border-box;
 }
 
@@ -159,7 +159,7 @@ body, html {
     color: white;
     border: none;
     cursor: pointer;
-    font-family: Montserrat, var(--default-font-family); /* Применение шрифта к кнопке */
+    font-family: Montserrat, var(--default-font-family); 
 }
 
 .form-container button:hover {
@@ -170,7 +170,7 @@ body, html {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -350px; /* Начальная позиция за экраном */
+    left: -350px; 
     width: 350px;
     height: 100%;
     background-color: #fff;
@@ -184,21 +184,21 @@ body, html {
 }
 
 .sidebar.active {
-    left: 0; /* Показываем сайдбар */
+    left: 0; 
 }
 
 .sidebar-logo {
     position: absolute;
-    top: 80px; /* Немного ниже */
-    left: 50%; /* Центрирование по горизонтали */
-    transform: translateX(-50%); /* Центрирование по горизонтали */
+    top: 80px; 
+    left: 50%; 
+    transform: translateX(-50%); 
     width: 80%;
     z-index: 1002;
 }
 
 @media (max-width: 768px) {
     .sidebar-logo {
-        top: 60px; /* Измените значение для маленьких экранов, если нужно */
+        top: 60px; 
     }
 }
 
@@ -220,7 +220,7 @@ body, html {
     transition: background-color 0.3s, color 0.3s;
     font-weight: 400;
     position: relative;
-    font-size: 24px; /* Размер шрифта */
+    font-size: 24px; 
 }
 
 .sidebar-menu .menu-item::after {
@@ -229,9 +229,9 @@ body, html {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 50%; /* Ширина линии под пунктами меню */
+    width: 50%; 
     height: 2px;
-    background-color: #ff8a44; /* Цвет линии */
+    background-color: #ff8a44; 
 }
 
 .sidebar-menu .menu-item:hover {
@@ -245,17 +245,17 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
-    z-index: 999; /* Располагается перед основным контентом, но за сайдбаром */
-    display: none; /* Скрыт по умолчанию */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+    display: none; 
     opacity: 0;
-    transition: opacity 0.3s ease; /* Плавный переход для затемнения */
+    transition: opacity 0.3s ease; 
 }
 
-/* Активное состояние затемняющего слоя */
+
 .overlay.active {
     display: block;
-    opacity: 1; /* Затемнение становится видимым */
+    opacity: 1;
 }
 
 .burger-menu-inside {

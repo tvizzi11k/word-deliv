@@ -30,7 +30,7 @@ html, body {
     height: 100vh;
     background: url(images/partnership-pic.png) no-repeat center center;
     background-size: cover;
-    background-position: center top; /* Поправка для более точного отображения */
+    background-position: center top; 
     background-attachment: fixed;
     z-index: 1;
 }

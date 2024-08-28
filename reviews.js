@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (form) {
     form.addEventListener("submit", (event) => {
-      event.preventDefault(); // Останавливаем стандартную отправку формы
+      event.preventDefault();
 
       const formData = new FormData(form);
 
@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Логика для бокового меню и бургер-меню
   const burgerMenu = document.querySelector(".frame");
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("sidebar-overlay");
@@ -71,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       overlay.classList.remove("active");
     });
 
-    // Закрытие бокового меню при клике на бургер-меню внутри
+
     burgerMenuInside.addEventListener('click', () => {
       burgerMenu.classList.remove('active');
       sidebar.classList.remove('active');
@@ -79,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Логика для переходов по страницам из меню
+
   const menuItems = document.querySelectorAll(".sidebar-menu .menu-item");
 
   menuItems.forEach((item, index) => {

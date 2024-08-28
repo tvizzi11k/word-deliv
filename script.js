@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
 
   form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Останавливаем стандартную отправку формы
+    event.preventDefault();
 
     const formData = new FormData(form);
 
@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
           const successMessage = document.getElementById("successMessage");
           const formContainer = document.getElementById("contact-form");
 
-          // Скрываем форму сразу после успешной отправки
+          
           formContainer.style.display = "none";
 
-          // Отображаем сообщение об успешной отправке
+          
           successMessage.style.display = "block";
           setTimeout(() => {
-            successMessage.style.display = "none"; // Скрываем сообщение через 3 секунды
-            window.location.href = "/"; // Перенаправление на главную страницу
-          }, 3000); // Сообщение будет отображаться 3 секунды перед перенаправлением
+            successMessage.style.display = "none"; 
+            window.location.href = "/"; 
+          }, 3000); 
         } else {
           console.error("Ошибка ответа:", data);
           alert("Ошибка отправки формы: " + (data.message || "Неизвестная ошибка"));
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Логика для открытия и закрытия формы
+  
   const formContainer = document.getElementById("contact-form");
   const openFormButton = document.getElementById("open-form-button");
   const closeFormButton = document.getElementById("close-form");
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Логика для бокового меню и бургер-меню
+  
   const burgerMenu = document.getElementById("burger-menu");
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("sidebar-overlay");
@@ -76,20 +76,20 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove("active");
   });
 
-  // Закрытие бокового меню при клике на бургер-меню внутри
+  
   burgerMenuInside.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
   });
 
-  // Логотип внутри боковой панели
+  
   const sidebarLogo = document.querySelector(".sidebar-logo");
   sidebarLogo.addEventListener("click", () => {
     window.location.href = "/";
   });
 
-  // Логика для переходов по страницам из меню
+  
   const menuItems = document.querySelectorAll(".sidebar-menu .menu-item");
 
   menuItems.forEach((item, index) => {

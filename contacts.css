@@ -28,17 +28,9 @@ html, body {
     height: 100vh;
     background: url(images/contact-pic.png) no-repeat center center;
     background-size: cover;
+    background-position: center top; 
+    background-attachment: fixed;
     z-index: 1;
-    transition: none; /* Убираем любые анимации и переходы */
-}
-
-@media screen and (max-width: 1024px) {
-    .background-image {
-        width: 100vw;
-        height: 100vh;
-        background-size: cover;
-        background-attachment: scroll;
-    }
 }
 
 
@@ -310,11 +302,11 @@ html, body {
     cursor: pointer;
 }
 
-/* Добавим рыжие полосы напротив кнопки */
+
 .orange-stripes {
     position: absolute;
-    top: 40px; /* Позиционирование напротив кнопки */
-    right: 480px; /* Сдвиг влево, чтобы полосы были напротив кнопки */
+    top: 40px;
+    right: 480px; 
     width: 300px;
     height: 2px;
     background-color: #ff8a44;
@@ -324,7 +316,7 @@ html, body {
 .orange-stripes::before {
     content: '';
     position: absolute;
-    top: 10px; /* Расстояние между полосами */
+    top: 10px; 
     left: 0;
     width: 300px;
     height: 2px;
