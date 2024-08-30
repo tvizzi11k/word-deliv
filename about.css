@@ -314,10 +314,15 @@ html, body {
   cursor: pointer;
 }
 
+.form-container button:hover {
+  background-color: #e77c3c;
+}
+
+/* Стили для бокового меню */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -350px;
+  left: -350px; 
   width: 350px;
   height: 100%;
   background-color: #fff;
@@ -331,7 +336,22 @@ html, body {
 }
 
 .sidebar.active {
-  left: 0;
+  left: 0; 
+}
+
+.sidebar-logo {
+  position: absolute;
+  top: 80px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 80%;
+  z-index: 1002;
+}
+
+@media (max-width: 768px) {
+  .sidebar-logo {
+      top: 60px; 
+  }
 }
 
 .sidebar-menu {
@@ -339,6 +359,7 @@ html, body {
   padding: 0;
   width: 100%;
   text-align: center;
+  font-family: Montserrat, sans-serif;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -350,9 +371,26 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   font-weight: 400;
-  font-size: 24px;
+  position: relative;
+  font-size: 24px; 
 }
 
+.sidebar-menu .menu-item::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 2px;
+  background-color: #ff8a44; 
+}
+
+.sidebar-menu .menu-item:hover {
+  color: #ff8a44;
+}
+
+/* Затемняющий слой */
 .overlay {
   position: fixed;
   top: 0;
@@ -360,13 +398,26 @@ html, body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: none;
+  z-index: 999; 
+  display: none; 
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; 
 }
 
 .overlay.active {
   display: block;
   opacity: 1;
+}
+
+.burger-menu-inside {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
