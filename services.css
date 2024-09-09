@@ -1,0 +1,154 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+        "Source Han Sans CN", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--default-font-family);
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar-logo {
+    position: absolute;
+    top: 80px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 1002;
+}
+
+@media (max-width: 768px) {
+    .sidebar-logo {
+        top: 60px;
+    }
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar-menu .menu-item {
+    padding: 25px 0;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 400;
+    font-size: 24px;
+    position: relative;
+}
+
+.sidebar-menu .menu-item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #ff8a44;
+}
+
+.sidebar-menu .menu-item:hover {
+    color: #ff8a44;
+}
+
+
+.content {
+    flex: 1;
+    padding: 0;
+    margin-left: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.service-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    overflow: hidden;
+    margin: 0; 
+    width: 100%;
+}
+
+
+.service-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+.railway {
+    background-image: url('images/railway.jpg');
+}
+
+.rental {
+    background-image: url('images/rental.jpg');
+}
+
+.sea {
+    background-image: url('images/sea.jpg');
+}
+
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff8a44;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    z-index: 2;
+    text-decoration: none; 
+    display: inline-block;
+}
+
+.overlay:hover {
+    background-color: #e07a3d; 
+    color: white; 
+}
