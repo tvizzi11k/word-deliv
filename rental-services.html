@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Аренда транспортных средств и спецтехники</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap"/>
+    <link rel="stylesheet" href="rental-services.css"/>
+</head>
+<body>
+<div class="main-container">
+    <div class="background-image"></div>
+    <div class="rectangle">
+        <button class="ellipse" id="open-form-button">
+            <span class="leave-request">ОСТАВИТЬ ЗАЯВКУ</span>
+        </button>
+        <div class="frame">
+            <!-- Иконка бургер-меню -->
+        </div>
+        <div class="content">
+            <h1>Аренда транспортных средств и спецтехники</h1>
+            <p><strong>1. Собственный парк техники:</strong></p>
+            <ul>
+                <li>Автокрановая техника, грузоподъемность 25 тонн</li>
+                <li>Погрузчики бортовые (площадка), грузоподъемность 20 тонн</li>
+                <li>Погрузчики (трап), грузоподъемность до 35 тонн</li>
+            </ul>
+            <p><strong>2. Квалифицированный персонал:</strong></p>
+            <ul>
+                <li>Стаж водителей и машинистов составляет не менее 3-лет</li>
+                <li>Наличие заключения ежегодного медосмотра для работы в районах крайнего севера</li>
+            </ul>
+            <p><strong>3. Оснащение техники:</strong></p>
+            <ul>
+                <li>Ремни безопасности</li>
+                <li>Бортовая система мониторинга</li>
+                <li>Видеорегистратор</li>
+                <li>Звуковой сигнал заднего хода</li>
+            </ul>
+            <p><strong>4. Наличие регистрационных документов:</strong></p>
+            <ul>
+                <li>Полный пакет регистрационных документов на технику</li>
+                <li>Свидетельство ОПО на автокрановую технику</li>
+            </ul>
+            <p>Место постоянного базирования техники - Бованенковское месторождение.</p>
+            <p>Работы могут выполняться на всех месторождениях полуострова Ямал.</p>
+            <p>Возможность мобилизации техники к местам ваших объектов работ.</p>
+        </div>
+    </div>
+</div>
+
+<div id="contact-form" class="form-container">
+    <div class="form-header">
+        <h2>Отправить заявку</h2>
+        <span id="close-form" class="close-button">&times;</span>
+    </div>
+    <form id="contactForm" action="http://localhost:8080/submit_form" method="POST">
+        <input type="text" name="name" placeholder="ВАШЕ имя" required>
+        <input type="text" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="Почта" required>
+        <textarea name="message" placeholder="Сообщение" required></textarea>
+        <button type="submit">ОТПРАВИТЬ</button>
+    </form>
+</div>
+
+<section class="map-section"></section>
+    <img src="images/image 11.jpg" alt="Карта расположения">
+</section>
+
+<!-- Сообщение об успешной отправке -->
+<div id="successMessage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ff8a44; color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); z-index: 1001; font-family: Montserrat, var(--default-font-family); text-align: center;">
+    Спасибо! Ваша заявка отправлена успешно.
+</div>
+
+<div id="sidebar-overlay" class="overlay"></div>
+
+<!-- Sidebar меню, которое будет появляться слева -->
+<div class="sidebar" id="sidebar">
+    <button class="burger-menu-inside">
+        <img src="images/burger-on-siteboard.svg" alt="Close" class="burger-icon">
+    </button
+    <a href="/" class="sidebar-logo">
+        <img src="images/logo.svg" alt="Logo">
+    </a>
+    <ul class="sidebar-menu">
+        <li class="menu-item">О компании</li>
+        <li class="menu-item">Услуги</li>
+        <li class="menu-item">Документы</li>
+        <li class="menu-item">Сотрудничество</li>
+        <li class="menu-item">Контакты</li>
+        <li class="menu-item">Отзывы</li>
+    </ul>
+</div>
+
+<script src="reviews.js"></script>
+</body>
+</html>
