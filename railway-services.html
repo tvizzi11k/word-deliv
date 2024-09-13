@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>word-delivery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap"/>
+    <link rel="stylesheet" href="railway-services.css"/>
+</head>
+<body>
+<div class="main-container">
+    <div class="background-image"></div>
+    <div class="rectangle">
+        <button class="ellipse" id="open-form-button">
+            <span class="leave-request">ОСТАВИТЬ ЗАЯВКУ</span>
+        </button>
+        <div class="frame">
+            <!-- Иконка бургер-меню -->
+        </div>
+        <div class="contacts-content">
+            <span class="contacts-1">Перевозка грузов ЖД транспортом</span>
+            <div class="contacts-info">
+                <div class="contact-block">
+                    <p class="text-bold">
+                        Перевозка любых грузов железнодорожным транспортом регулируется законодательством. Для каждого вида груза обозначены отдельные правила перевозки грузов. Грузы классифицируются по размеру, весу, техническим характеристикам и требуемым условиям перевозки. Основные услуги компании:
+                        <ul class="bullet-points">
+                            <li>Разработка и согласование схем моргузки (эскизы, НТУ, МТУ, негабаритные и тяжеловесные грузы)</li>
+                            <li>Размещение и крепление грузов на открытом и в закрытом движущем составе</li>
+                            <li>Хранение грузов на открытых площадках и в крытых складах</li>
+                            <li>Контроль за соблюдением ТУ размещения и крепления грузов</li>
+                            <li>Оплата жд тарифов по инфраструктурам ОАО "РЖД", АО "ФДЦКЛ", ООО "Экспопромтранс"</li>
+                            <li>Заказоперевозка грузов до станции получения</li>
+                            <li>Предоставление подвижного состава под отгрузку</li>
+                            <li>Слежение за нахождением подвижного состава в пути следования</li>
+                            <li>Страхование груза в пути следования по дополнительному запросу</li>
+                            <li>Обеспечение реквизитом крепления (пломбатериал, проволока, крепеж и прочее)</li>
+                            <li>Оформление карантинных сертификатов на веспоропродукцию</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="additional-section">
+    <h2 class="section-title">Организация перевозок железнодорожным транспортом</h2>
+    <div class="grid-container">
+        <div class="info-block">
+            <h3>Преимущества перевозок железнодорожным транспортом:</h3>
+            <ul>
+                <li>Безопасность - один из самых безопасных видов транспорта.</li>
+                <li>Экономичность - стоимость ниже, чем у автотранспорта.</li>
+                <li>Большая грузоподъемность - возможность перевозки крупнотоннажных грузов.</li>
+                <li>Скорость - быстрая доставка по сравнению с морским транспортом.</li>
+            </ul>
+        </div>
+        <div class="info-block">
+            <h3>Особенности перевозки:</h3>
+            <p>Перевозка различных типов грузов, включая негабаритные и опасные, регулируется строгими правилами.</p>
+        </div>
+        <div class="info-block">
+            <h3>Дополнительные услуги:</h3>
+            <ul>
+                <li>Разработка и согласование схем грузоперевозок.</li>
+                <li>Хранение и страхование грузов.</li>
+                <li>Предоставление отчетов о местонахождении груза.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="contact-form" class="form-container">
+    <div class="form-header">
+      <h2>Отправить заявку</h2>
+      <span id="close-form" class="close-button">&times;</span>
+    </div>
+    <form id="contactForm" action="http://localhost:8080/submit_form" method="POST">
+      <input type="text" name="name" placeholder="ВАШЕ имя" required>
+      <input type="text" name="phone" placeholder="Телефон" required>
+      <input type="email" name="email" placeholder="Почта" required>
+      <textarea name="message" placeholder="Сообщение" required></textarea>
+      <button type="submit">ОТПРАВИТЬ</button>
+    </form>
+</div>
+<div id="successMessage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ff8a44; color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); z-index: 1001; font-family: Montserrat, var(--default-font-family); text-align: center;">
+    Спасибо! Ваша заявка отправлена успешно.
+  </div>
+
+  <div id="sidebar-overlay" class="overlay"></div>
+
+  <div class="sidebar" id="sidebar">
+    <button class="burger-menu-inside">
+      <img src="images/burger-on-siteboard.svg" alt="Close" class="burger-icon">
+    </button>
+    <a href="/" class="sidebar-logo">
+      <img src="images/logo.svg" alt="Logo">
+    </a>
+    <ul class="sidebar-menu">
+      <li class="menu-item">О компании</li>
+      <li class="menu-item">Услуги</li>
+      <li class="menu-item">Документы</li>
+      <li class="menu-item">Сотрудничество</li>
+      <li class="menu-item">Контакты</li>
+      <li class="menu-item">Отзывы</li>
+    </ul>
+  </div>
+
+
+<script src="reviews.js"></script>
+</body>
+</html>
