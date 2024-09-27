@@ -365,18 +365,17 @@ p {
 /* Добавлено оформление для новой секции с изображением */
 .map-section {
     width: 100%;
+    padding: 50px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: white; /* Фон секции */
-    padding: 50px 0;
-    position: relative; /* Необходимо для правильного z-index */
-    z-index: 5; /* Повышаем, чтобы картинка не перекрывалась */
+    background-color: #ffffff; /* фон, если карта не загрузится */
 }
 
-.map-section img {
-    max-width: 90%; /* Подходящая ширина для большинства экранов */
-    height: auto; /* Сохранение пропорций */
-    display: block; /* Убираем выравнивание по тексту */
+.styled-map {
+    max-width: 90%; /* подходит для большинства экранов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* тень для более выраженного внешнего вида */
+    border: 1px solid #ddd; /* тонкая граница вокруг карты */
+    border-radius: 4px; /* скругление углов */
 }
+
 
